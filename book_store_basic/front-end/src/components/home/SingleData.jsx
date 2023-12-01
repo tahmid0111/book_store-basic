@@ -18,41 +18,73 @@ const SingleData = (props) => {
     }
 
   return (
-    <div className='col-span-6'>
-
+    <div className='col-span-4'>
+      {/* // ==================main-card-start===================== */}
       <div className="card card-side shadow-xl bg-red-400 m-5">
+
         <figure><img src={image} alt="book" /></figure>
+
         <div className="card-body">
+
           <h2 className="card-title">{title}</h2>
-          <p>{desc}</p>
+
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">{price}</button>
-            <button className="btn btn-primary">Buy Now</button>
+
+            <p className="text-xl text-black font-bold">{price}</p>
+
             {/* <button><Link to={`/readone/${_id}`}>Details</Link></button> */}
 
 
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
-              <button className="btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button>
-              
+            {/* // ========================modal-start============================ */}
+              <button className="btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>Details</button>
+
               <dialog id="my_modal_3" className="modal">
-                <div className="modal-box">
+
+                <div className="modal-box p-10">
+
                   <form method="dialog">
                     {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+
                   </form>
-                  <h3 className="font-bold text-lg">Hello!</h3>
-                  <p className="py-4">Press ESC key or click on ✕ button to close</p>
+
+                  {/* // ========================card-start============================ */}
+                  <div className="card w-96 bg-base-100 shadow-xl">
+
+                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+
+                    <div className="card-body">
+
+                      <h2 className="card-title">Shoes!</h2>
+
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+
+                      <div className="card-actions justify-end">
+
+                        <button className='btn btn-warning'><Link to={`/update/${_id}`}>Update</Link></button>
+                        <button className='btn btn-warning' onClick={() => handleClick(_id)}>delete</button>
+                        <button className="btn btn-primary">Add to Cart</button>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                  {/* // ========================card-end============================ */}
+
                 </div>
+
               </dialog>
+              {/* // ========================modal-end============================ */}
 
-
-
-
-            <button><Link to={`/update/${_id}`}>Update</Link></button>
-            <button onClick={() => handleClick(_id)}>delete</button>
           </div>
+
         </div>
+
       </div>
+    
+    {/* // ==================main-card-end=================== */}
 
     </div>
   )
