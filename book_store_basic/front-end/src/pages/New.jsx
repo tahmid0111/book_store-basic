@@ -32,7 +32,7 @@ const New = () => {
         {loading && <div class="flex justify-center items-center h-screen">
           <span class="loading loading-dots loading-lg text-warning text-center"></span>
         </div>}
-      <div className='px-5 mx-auto grid grid-cols-12'>
+      <div className='px-5 grid grid-cols-12'>
 
         <div className="col-span-12 py-10">
           <h1 className='text-2xl border-l-[10px] border-red-500 pl-5 bg-pink-300 py-5'>New Book Collection</h1>

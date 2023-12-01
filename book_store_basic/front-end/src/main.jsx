@@ -14,6 +14,7 @@ import axios from 'axios';
 import Update from './components/update/Update';
 import ProgrammerBooks from './pages/ProgrammerBooks';
 import New from './pages/New';
+import PythonPage from './pages/PythonPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/registration',
     element: <Registration />,
+  },
+  {
+    path: '/python',
+    element: <PythonPage />,
   },
   {
     path: '/readone/:id',

@@ -33,9 +33,11 @@ const Python = () => {
         <span class="loading loading-dots loading-lg text-warning text-center"></span>
         </div>}
 
+      <div className='px-5 grid grid-cols-12'>
         {
             books.map((item, i) => <CommonSingleBook key={i} book={item} />)
         }
+      </div>
 
       </div>
 
