@@ -12,6 +12,7 @@ import Registration from './pages/Registration';
 import SingleRead from './components/home/SingleRead';
 import axios from 'axios';
 import Update from './components/update/Update';
+import ProgrammerBooks from './pages/ProgrammerBooks';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
   {
     path: '/readone/:id',
     element: <SingleRead />,
+  },
+  {
+    path: '/update/:id',
+    element: <Update />,
+  },
+  {
+    path: '/programmerbooks',
+    element: <ProgrammerBooks />,
   },
   {
     path: '/update/:id',

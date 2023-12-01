@@ -5,6 +5,6 @@ const taskSchema = mongoose.Schema({
     Email: String
 })
 
-const taskModel = mongoose.model('tasks', taskSchema)
+const taskModel = mongoose.model('books', taskSchema)
 
 module.exports = taskModel
