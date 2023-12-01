@@ -36,11 +36,11 @@ const SingleData = (props) => {
             {/* // ========================modal-start============================ */}
             <button
               className="btn"
-              onClick={() => document.getElementById("my_modal_3").showModal()}>
+              onClick={() => document.getElementById(`my_modal_${_id}`).showModal()}>
               Details
             </button>
 
-            <dialog id="my_modal_3" className="modal">
+            <dialog id={`my_modal_${_id}`} className="modal">
               <div className="modal-box p-10">
                 <form method="dialog">
                   {/* if there is a button in form, it will close the modal */}
@@ -52,10 +52,7 @@ const SingleData = (props) => {
                 {/* // ========================card-start============================ */}
                 <div className="card w-96 bg-base-100 shadow-xl">
                   <figure>
-                    <img
-                      src={image}
-                      alt="image"
-                    />
+                    <img src={image} alt="image" />
                   </figure>
 
                   <div className="card-body">
