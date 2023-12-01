@@ -15,6 +15,7 @@ import Update from './components/update/Update';
 import ProgrammerBooks from './pages/ProgrammerBooks';
 import New from './pages/New';
 import PythonPage from './pages/PythonPage';
+import JavaScriptPage from './pages/JavaScriptPage';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/python',
     element: <PythonPage />,
+  },
+  {
+    path: '/javascript',
+    element: <JavaScriptPage />,
   },
   {
     path: '/readone/:id',

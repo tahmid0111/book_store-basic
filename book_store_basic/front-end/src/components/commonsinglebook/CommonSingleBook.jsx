@@ -8,7 +8,7 @@ const CommonSingleBook = (props) => {
   return (
     <div className='col-span-4 my-10 mx-auto'>
 
-    <div className="card w-96 shadow-xl bg-pink-200">
+    <div className="card w-96 shadow-xl bg-purple-300">
 
       <figure><img src={image} alt="dream books" /></figure>
 

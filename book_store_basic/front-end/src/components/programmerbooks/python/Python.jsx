@@ -34,6 +34,12 @@ const Python = () => {
         </div>}
 
       <div className='px-5 grid grid-cols-12'>
+
+        <div className="col-span-12 py-10">
+          <h1 className='text-2xl border-l-[10px] border-red-500 pl-5 bg-red-400 py-5'>Python Book Collection</h1>
+        </div>
+
+
         {
             books.map((item, i) => <CommonSingleBook key={i} book={item} />)
         }

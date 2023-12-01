@@ -31,7 +31,7 @@ const Navbar = () => {
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/projects' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>JavaScript</NavLink>
+                <NavLink to='/javascript' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>JavaScript</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">
