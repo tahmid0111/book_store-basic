@@ -10,12 +10,12 @@ import "./index.css";
 import Home from './pages/Home';
 import Registration from './pages/Registration';
 import SingleRead from './components/home/SingleRead';
-import axios from 'axios';
 import Update from './components/update/Update';
 import ProgrammerBooks from './pages/ProgrammerBooks';
 import New from './pages/New';
 import PythonPage from './pages/PythonPage';
 import JavaScriptPage from './pages/JavaScriptPage';
+import HtmlPage from './pages/HtmlPage';
 
 const router = createBrowserRouter([
   {
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: '/registration',
-    element: <Registration />,
+    path: '/programmerbooks',
+    element: <ProgrammerBooks />,
   },
   {
     path: '/python',
@@ -39,16 +39,22 @@ const router = createBrowserRouter([
     element: <JavaScriptPage />,
   },
   {
+    path: '/html',
+    element: <HtmlPage />,
+  },
+  {
+    path: '/registration',
+    element: <Registration />,
+  },
+
+  // pages link end
+  {
     path: '/readone/:id',
     element: <SingleRead />,
   },
   {
     path: '/update/:id',
     element: <Update />,
-  },
-  {
-    path: '/programmerbooks',
-    element: <ProgrammerBooks />,
   },
   {
     path: '/update/:id',

@@ -84,7 +84,7 @@ const Register = () => {
             />
           </div>
         </div>
-        <button type="submit" className="mt-4 bg-red-500 text-white font-bold p-2 rounded-md">
+        <button type="submit" className="mt-4 bg-red-500 text-white font-bold p-2 rounded-md w-32">
           Add Book
         </button>
       </form>
