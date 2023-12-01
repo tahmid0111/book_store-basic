@@ -19,23 +19,23 @@ const Navbar = () => {
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/home' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Home</NavLink>
+                <NavLink to='/home' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>Home</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/ProgrammerBooks' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>All Books</NavLink>
+                <NavLink to='/ProgrammerBooks' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>All Books</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/service' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>Python</NavLink>
+                <NavLink to='/service' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>Python</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/projects' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>JavaScript</NavLink>
+                <NavLink to='/projects' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>JavaScript</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">
-                <NavLink to='/testimonials' className={({ isActive }) => isActive? "active text-lg font-semibold": 'text-lg font-semibold'}>HTML & CSS</NavLink>
+                <NavLink to='/testimonials' className={({ isActive }) => isActive? "text-white text-lg font-semibold": 'text-lg font-semibold'}>HTML & CSS</NavLink>
               </li>
 
               <li className="py-10 px-2 lg:px-5">

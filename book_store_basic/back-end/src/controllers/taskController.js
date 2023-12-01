@@ -18,7 +18,7 @@ exports.Create = async (req, res) => {
 exports.ReadAll = async (req, res) => {
     try {
         const data = await taskModel.find()
-        res.status(200).json({status: 'your all datan are here', data: data})
+        res.status(200).json({status: 'your all datas are here', data: data})
     } catch (error) {
         res.status(404).json({status: 'something went wrong', data: error})
     }

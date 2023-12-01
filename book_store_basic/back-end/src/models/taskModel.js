@@ -1,8 +1,10 @@
 const mongoose=require('mongoose')
 
 const taskSchema = mongoose.Schema({
-    userName: String,
-    Email: String
+    title: String,
+    desc: String,
+    price: Number,
+    image: String,
 })
 
 const taskModel = mongoose.model('books', taskSchema)
