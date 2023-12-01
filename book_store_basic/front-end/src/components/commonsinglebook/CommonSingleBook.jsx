@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleBook = (props) => {
+const CommonSingleBook = (props) => {
 
     const {title, subtitle: desc, isbn13, price, image} = props.book
 
@@ -14,4 +14,4 @@ const SingleBook = (props) => {
   )
 }
 
-export default SingleBook
+export default CommonSingleBook

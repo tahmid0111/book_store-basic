@@ -13,10 +13,15 @@ import SingleRead from './components/home/SingleRead';
 import axios from 'axios';
 import Update from './components/update/Update';
 import ProgrammerBooks from './pages/ProgrammerBooks';
+import New from './pages/New';
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <New />,
+  },
+  {
+    path: '/home',
     element: <Home />,
   },
   {

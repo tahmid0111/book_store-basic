@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SingleBook from './SingleBook';
+import CommonSingleBook from '../../commonsinglebook/CommonSingleBook';
 
 const Javascript = () => {
   const [books, setBooks] = useState([]);
@@ -34,7 +34,7 @@ const Javascript = () => {
       </div>}
 
         {
-            books.map((item, i) => <SingleBook key={i} book={item} />)
+            books.map((item, i) => <CommonSingleBook key={i} book={item} />)
         }
 
       </div>
