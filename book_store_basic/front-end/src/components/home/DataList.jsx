@@ -11,9 +11,11 @@ const DataList = () => {
     }, [datas])
   return (
     <div>
-      {
-        datas.map((item, i) => <SingleData key={i} item={item} />)
-      }
+      <div className='px-5 mx-auto grid grid-cols-12'>
+        {
+          datas.map((item, i) => <SingleData key={i} item={item} />)
+        }
+      </div>
     </div>
   )
 }
