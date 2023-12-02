@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const SingleBook = (props) => {
 
-    const {title, subtitle: desc, isbn13, price, image} = props.book
+    const {title, subtitle: desc, isbn13, price, image} = props.item
 
   return (
     <div className='col-span-4 my-10 mx-auto'>

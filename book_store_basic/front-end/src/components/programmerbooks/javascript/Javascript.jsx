@@ -1,9 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import CommonSingleBook from '../../commonsinglebook/CommonSingleBook';
+import DynamicSearch from '../../dynamicsearch/DynamicSearch';
 
 const JavaScript = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filterDatas, setFilterdatas] = useState(books);
+
+  const handleNew = (todos) => {
+
+    const todosLower = todos.toLowerCase();
+
+    const newData = books.filter((d) => {
+
+      let dataName = d.title.toLowerCase();
+
+      return dataName.includes(todosLower);
+
+    });
+
+    setFilterdatas(newData);
+
+  }
 
   useEffect(() => {
     fetchBooks();
@@ -29,6 +47,7 @@ const JavaScript = () => {
     <>
       <div>
 
+      <DynamicSearch onText={handleNew} />
 
         {loading && <div class="flex justify-center items-center h-screen">
         <span class="loading loading-dots loading-lg text-warning text-center"></span>
@@ -40,9 +59,9 @@ const JavaScript = () => {
           <h1 className='text-2xl border-l-[10px] border-red-500 pl-5 bg-yellow-300 py-5'>JavaScript Book Collection</h1>
         </div>
 
-        {
-            books.map((item, i) => <CommonSingleBook key={i} book={item} />)
-        }
+
+        {filterDatas.length === 0 ? books.map((item, i) => <CommonSingleBook key={i} item={item} />) :
+            filterDatas.map((item, i) => <CommonSingleBook key={i} item={item} /> )}
       </div>
 
       </div>

@@ -1,11 +1,11 @@
+import DynamicSearch from "../components/dynamicsearch/DynamicSearch";
 import DataList from "../components/home/DataList";
-import DynamicSearch from "../components/home/DynamicSearch";
 import Layout from "../layout/Layout";
 
 const Home = () => {
   return (
     <Layout>
-      {/* <DynamicSearch /> */}
+      
       <DataList />
     </Layout>
   );

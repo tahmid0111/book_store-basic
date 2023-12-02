@@ -41,7 +41,7 @@ const Java = () => {
           </div>
 
           {books.map((item, i) => (
-            <CommonSingleBook key={i} book={item} />
+            <CommonSingleBook key={i} item={item} />
           ))}
         </div>
       </div>

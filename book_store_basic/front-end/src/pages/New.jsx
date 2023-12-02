@@ -1,10 +1,28 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../layout/Layout";
 import SingleBook from "../components/newbooks/SingleBook";
+import DynamicSearch from "../components/dynamicsearch/DynamicSearch";
 
 const New = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filterDatas, setFilterdatas] = useState(books);
+
+  const handleNew = (todos) => {
+
+    const todosLower = todos.toLowerCase();
+
+    const newData = books.filter((d) => {
+
+      let dataName = d.title.toLowerCase();
+
+      return dataName.includes(todosLower);
+
+    });
+
+    setFilterdatas(newData);
+
+  }
 
   useEffect(() => {
     fetchBooks();
@@ -27,6 +45,9 @@ const New = () => {
 
   return (
     <Layout>
+
+      <DynamicSearch onText={handleNew} />
+
       {loading && (
         <div class="flex justify-center items-center h-screen">
           <span class="loading loading-dots loading-lg text-warning text-center"></span>
@@ -35,13 +56,13 @@ const New = () => {
       <div className="px-5 grid grid-cols-12">
         <div className="col-span-12 py-10">
           <h1 className="text-2xl border-l-[10px] border-red-500 pl-5 bg-pink-300 py-5">
-            New Book Collection
+            Check Our Latest Collections
           </h1>
         </div>
 
-        {books.map((item, i) => (
-          <SingleBook key={i} book={item} />
-        ))}
+            {filterDatas.length === 0 ? books.map((item, i) => <SingleBook key={i} item={item} />) :
+            filterDatas.map((item, i) => <SingleBook key={i} item={item} /> )}
+
       </div>
     </Layout>
   );
