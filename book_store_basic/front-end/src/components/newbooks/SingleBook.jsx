@@ -30,7 +30,7 @@ const SingleBook = (props) => {
 
           <button className="btn btn-warning w-full mt-2">
 
-            <Link to={`https://api.itbook.store/1.0/books/${isbn13}`} target="_blank">Open Book in New Tab</Link>
+            <Link to={`readone/${isbn13}`} target="_blank">Open Book in New Tab</Link>
 
           </button>
 

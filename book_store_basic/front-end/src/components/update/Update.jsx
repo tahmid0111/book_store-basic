@@ -2,6 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Update = () => {
   let navigate = useNavigate();
   let { id } = useParams();
@@ -29,7 +32,10 @@ const Update = () => {
       );
 
       if (response.status === 200) {
-        navigate("/home");
+        toast("Sucessfully Updated!")
+        setTimeout(() => {
+          navigate("/home");
+        }, 2000)
       } else {
         console.error("Update failed");
       }
@@ -46,6 +52,7 @@ const Update = () => {
 
   return (
     <div className="px-5 py-20 bg-gray-200">
+      <ToastContainer />
       <form onSubmit={handleSubmit} className="w-full max-w-xl mx-auto bg-white p-8 shadow rounded-md">
         <h2 className="text-2xl font-bold text-gray-800 text-center">Update Book</h2>
         <div className="flex flex-col mt-4">

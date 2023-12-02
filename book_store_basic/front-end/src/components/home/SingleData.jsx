@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+
 const SingleData = (props) => {
   const { title, desc, price, image, _id } = props.item;
 
@@ -9,7 +10,7 @@ const SingleData = (props) => {
     let id = _id;
     axios.post(`http://localhost:8080/api/v1/deleteone/${id}`).then((res) => {
       if (res === 200) {
-        return "success";
+        return 'true'
       } else {
         return "false";
       }
@@ -18,6 +19,7 @@ const SingleData = (props) => {
 
   return (
     <div className="col-span-4">
+      
       {/* // ==================main-card-start===================== */}
       <div className="card card-side shadow-xl bg-cyan-400 m-5">
         <figure>

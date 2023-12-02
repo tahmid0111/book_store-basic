@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
   return (
     <div>
-      <div className="hidden md:block bg-yellow-400 sticky top-0 left-0 z-[99999]">
+      <div className="hidden md:block bg-yellow-400 sticky top-0 left-0">
         <div className="header-area px-2 lg:px-10 grid grid-cols-12">
           <div className="col-span-2">
             <h3 className="py-8 xl:py-10 text-2xl font-bold xl:text-center">
