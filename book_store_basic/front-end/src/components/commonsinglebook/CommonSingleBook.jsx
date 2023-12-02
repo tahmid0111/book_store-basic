@@ -20,7 +20,7 @@ const CommonSingleBook = (props) => {
 
         <div className="card-actions">
 
-          <button className="btn btn-accent w-[37%]">{price}</button>
+          <button className="btn btn-accent w-[37%] cursor-default">{price}</button>
           <button className="btn btn-primary w-[60%]">Add to Cart</button>
 
           <button className="btn btn-warning w-full mt-2">

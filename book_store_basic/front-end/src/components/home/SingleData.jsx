@@ -28,14 +28,14 @@ const SingleData = (props) => {
           <h2 className="card-title">{title}</h2>
 
           <div className="card-actions justify-end">
-            <p className="text-xl text-black font-bold">{price}</p>
+            <button className="btn btn-warning cursor-default">{price}</button>
 
             {/* <button><Link to={`/readone/${_id}`}>Details</Link></button> */}
 
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             {/* // ========================modal-start============================ */}
             <button
-              className="btn"
+              className="btn px-10"
               onClick={() => document.getElementById(`my_modal_${_id}`).showModal()}>
               Details
             </button>
